@@ -33,10 +33,17 @@
 
 % 字体包
 \usepackage[UTF8]{ctex}
-% 默认字体
+% 英文默认字体配置部分
 \setmainfont[]{Times New Roman}
 \setsansfont[]{Arial}
 \setmonofont{Monaco}        % 等宽字体，一般用于排版代码
+% 中文默认字体配置部分，针对OSX系统
+\usepackage{xeCJK}%中文字体
+\setCJKmainfont{STSongti-SC-Regular}%正文字体
+\setCJKsansfont{STHeitiSC-Light}%无衬线字体
+\setCJKmonofont{STKaitiSC-Regular}%等宽字体
+
+
 
 % 设置每页上下左右页间距
 \usepackage{geometry}
@@ -45,7 +52,7 @@
 
 % 使用行间距
 \usepackage{setspace}
-\renewcommand{\baselinestretch}{1.5}
+\renewcommand{\baselinestretch}{1.3}
 
 % 超链接
 \usepackage{hyperref}
