@@ -1,0 +1,78 @@
+% !TEX program = pdflatex
+\documentclass[a4paper]{article}
+
+% 代码插入
+\usepackage{listings}
+% 设置代码格式
+\lstset{
+    basicstyle          =   \sffamily,          % 基本代码风格
+    keywordstyle        =   \bfseries,          % 关键字风格
+    commentstyle        =   \rmfamily\itshape,  % 注释的风格，斜体
+    stringstyle         =   \ttfamily,  % 字符串风格
+    breaklines,                     % 自动换行
+    flexiblecolumns,                % 别问为什么，加上这个
+    numbers             =   left,   % 行号的位置在左边
+    showspaces          =   false,  % 是否显示空格，显示了有点乱，所以不现实了
+    numberstyle         =   \zihao{-5}\ttfamily,    % 行号的样式，小五号，tt等宽字体
+    showstringspaces    =   false,
+    captionpos          =   t,      % 这段代码的名字所呈现的位置，t指的是top上面
+    frame               =   lrtb,   % 显示边框
+    escapeinside=``, % 设置逃逸字符，可以冲lstlisting环境跳回到LaTex环境
+    xleftmargin=2em,
+    xrightmargin=2em, 
+    aboveskip=1em
+}
+
+% 指定字体
+\usepackage{fontspec}
+\newfontfamily{\menlo}{Menlo}
+
+
+% 字体包
+\usepackage[UTF8]{ctex}
+% 默认字体
+\setmainfont[]{Times New Roman}
+\setsansfont[]{Arial}
+\setmonofont{Monaco}        % 等宽字体，一般用于排版代码
+
+% 设置每页上下左右页间距
+\usepackage{geometry}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+
+
+%使用行间距
+\usepackage{setspace}
+\begin{spacing}{1.3}
+\end{spacing}
+
+\title{LeetCode354-俄罗斯套娃信封问题}
+
+\begin{document}
+\maketitle
+
+\section{题目描述}
+给定一些标记了宽度和高度的信封，宽度和高度以整数对形式$(w,h)$出现。当另一个信封的宽度和高度都比
+这个信封大的时候，这个信封就可以放进另一信封里，如同俄罗斯套娃一样。
+
+请计算最多能有多少个信封能组成一组“俄罗斯套娃”信封（即可以把一个信封放到另一个信封里面）。
+
+\noindent
+\textbf{说明：}
+
+不允许选择信封。
+
+\noindent
+\textbf{示例：}
+
+\begin{lstlisting}[language=bash,numbers=left,numberstyle=\tiny\menlo,basicstyle=\small\menlo]
+    `\textbf{Input:}` envelopes=[[5,4],[6,4],[6,7],[2,3]]
+    `\textbf{Output:}` 3
+    `\textbf{Explanation:}` The maximum number of envelopes you can Russian doll is 3 ([2,3] => [5,4] => [6,7]).
+\end{lstlisting}
+
+
+
+\section{解法}
+
+
+\end{document}
